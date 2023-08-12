@@ -9,7 +9,7 @@
 #	context = {'result': allnotices}
       
 	#return render(request,'user/notice.html')
-	 #return render(request,'user/notice.html',context)
+	 #return render(request,'user/index.html',context)
 
 from django.shortcuts import render
 from myadmin.models import Notice
