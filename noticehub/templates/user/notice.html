@@ -1,0 +1,31 @@
+{% load static %}
+<!DCTYPE html>
+<html>
+<head>
+	<title>Notice</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'user/css/style.css' %}">
+</head>
+<body>
+	<div class="header">
+		<h1 align="center">Notice Hub</h1>
+	</div>
+	<div class="content">
+		<h2 align="center" style="text-decoration: underline;color: black">Latest Notices</h2>
+		
+	    
+	        {% for myadmin_notice in result %}
+	    	  <div class="notice">
+                <h3>{{ myadmin_notice.subject }}</h2>
+                <p>{{ myadmin_notice.description }}</p>
+                <p>Created At : {{ myadmin_notice.created_at }}</p>
+                <p>Updated At : {{ myadmin_notice.updated_at }}</p>
+              </div>
+            {% endfor %}
+	   
+		</div>
+	<div class="footer">
+		<h3 align="center" style="padding-top: 2px; color: white">@copyright</h3>
+	</div>
+
+</body>
+</html>
